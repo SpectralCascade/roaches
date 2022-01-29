@@ -8,6 +8,23 @@ public class HandPresencePhysics : MonoBehaviour
     public Rigidbody rigidBody;
     public float distanceToShowRealHandPosition = 0.05f;
     public Renderer nonPhysicalHand;
+    private Collider[] colliders;
+
+    private void Start() {
+        colliders = GetComponentsInChildren<Collider>();
+    }
+
+    public void EnableHandCollider() {
+        for (int i = 0, counti = colliders.Length; i < counti; i++) {
+            colliders[i].enabled = true;
+        }
+    }
+
+    public void DisableHandCollider() {
+        for (int i = 0, counti = colliders.Length; i < counti; i++) {
+            colliders[i].enabled = false;
+        }
+    }
 
     private void Update() {
         nonPhysicalHand.enabled = Vector3.Distance(transform.position, target.position) > distanceToShowRealHandPosition;
