@@ -14,10 +14,14 @@ public class HandPresencePhysics : MonoBehaviour
         colliders = GetComponentsInChildren<Collider>();
     }
 
-    public void EnableHandCollider() {
+    private void EnableCollidersDelay() {
         for (int i = 0, counti = colliders.Length; i < counti; i++) {
             colliders[i].enabled = true;
         }
+    }
+
+    public void EnableHandCollider() {
+        Invoke("EnableCollidersDelay", 0.3f);
     }
 
     public void DisableHandCollider() {
