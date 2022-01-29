@@ -4380,6 +4380,22 @@ MonoBehaviour:
   animator: {fileID: 8296172668509164292}
   rightFootPosWeight: 1
   leftFootPosWeight: 1
+--- !u!114 &8296172668509164294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668509164291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edec96beec4d36439622652ee6a2418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headLocalThresholdSpeed: 0.1
+  smoothing: 0.3
+  animator: {fileID: 8296172668509164292}
+  rigVR: {fileID: 734284378}
 --- !u!4 &8624560020015195230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -598812017212592556, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
