@@ -1,0 +1,5 @@
+Valem tutorials - VR hands package
+
+character model - https://www.turbosquid.com/3d-models/rigged-character-unity-3d-1565844
+
+character animations - Mixamo xbot https://www.mixamo.com/#/?limit=96&page=4&query=walking
