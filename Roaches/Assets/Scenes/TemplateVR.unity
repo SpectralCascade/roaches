@@ -1076,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291326, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5686134208553648640, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
       propertyPath: m_Layer
@@ -1190,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5686134208567250702, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6fdd4b9480500e4ea28cad030e5ddc2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
 --- !u!4 &459227343 stripped
@@ -1471,6 +1475,11 @@ Transform:
 Animator:
   m_CorrespondingSourceObject: {fileID: 8350836956578110893, guid: 3c99d0ba506360a43b8cea08ef805d25, type: 3}
   m_PrefabInstance: {fileID: 556630446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &650565954 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 109434733571648788, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
+  m_PrefabInstance: {fileID: 2060101232}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &711206486
 GameObject:
@@ -3063,6 +3072,11 @@ MonoBehaviour:
     m_MaintainTargetRotationOffset: 0
   m_SourceObjectsGUIToggle: 1
   m_SettingsGUIToggle: 0
+--- !u!137 &1166927254 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5686134208567250702, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+  m_PrefabInstance: {fileID: 459227342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1326194827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,13 +3521,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669158480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.739, z: -3.008}
+  m_LocalRotation: {x: 0.009300496, y: -0.89971256, z: 0.27233604, w: 0.3409749}
+  m_LocalPosition: {x: 0.851, y: 3.105, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 169245281}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 29.762, y: -135.497, z: 11.225}
 --- !u!20 &1669158483
 Camera:
   m_ObjectHideFlags: 0
@@ -3721,6 +3735,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.632
       objectReference: {fileID: 0}
+    - target: {fileID: 109434733571648788, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e6fdd4b9480500e4ea28cad030e5ddc2, type: 2}
     - target: {fileID: 3621981467535291324, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3775,7 +3793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291326, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
@@ -3907,6 +3925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 711206487}
   rigidBody: {fileID: 1112552385339464283}
+  distanceToShowRealHandPosition: 0.05
+  nonPhysicalHand: {fileID: 650565954}
 --- !u!4 &1155889543610091799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8067482493928635619, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
@@ -4210,6 +4230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 311004780}
   rigidBody: {fileID: 6421140428538928542}
+  distanceToShowRealHandPosition: 0.05
+  nonPhysicalHand: {fileID: 1166927254}
 --- !u!4 &6547577515814340319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2675794521421869867, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}

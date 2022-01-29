@@ -6,6 +6,12 @@ public class HandPresencePhysics : MonoBehaviour
 {
     public Transform target;
     public Rigidbody rigidBody;
+    public float distanceToShowRealHandPosition = 0.05f;
+    public Renderer nonPhysicalHand;
+
+    private void Update() {
+        nonPhysicalHand.enabled = Vector3.Distance(transform.position, target.position) > distanceToShowRealHandPosition;
+    }
 
     // Update is called once per frame
     private void FixedUpdate()
