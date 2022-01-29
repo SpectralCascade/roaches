@@ -1707,6 +1707,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 06e62023b45d9354c9aa9da28181b183, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6041373139799548884, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -1773,7 +1789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3125,7 +3141,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1669158481}
   - component: {fileID: 1669158483}
-  - component: {fileID: 1669158482}
   m_Layer: 0
   m_Name: CockroachCam
   m_TagString: Untagged
@@ -3147,14 +3162,6 @@ Transform:
   m_Father: {fileID: 169245281}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1669158482
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669158480}
-  m_Enabled: 1
 --- !u!20 &1669158483
 Camera:
   m_ObjectHideFlags: 0
@@ -3857,6 +3864,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
   m_PrefabInstance: {fileID: 734284298}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &8296172668509164292 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
+  m_PrefabInstance: {fileID: 734284298}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8296172668509164293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668509164291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df0cbb1059c4374ea7e7fcb13dbe06f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8296172668509164292}
+  rightFootPosWeight: 1
+  leftFootPosWeight: 1
 --- !u!4 &8624560020015195230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -598812017212592556, guid: 26f83053c50656744992bec2f7a2c8c8, type: 3}
