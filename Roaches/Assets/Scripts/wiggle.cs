@@ -24,7 +24,7 @@ public class wiggle : MonoBehaviour
 
         }
 
-        if(leftRight)   //leftright is just a bool which is toggled so that the legs move back and forth.
+        if (leftRight)   //leftright is just a bool which is toggled so that the legs move back and forth.
         {
             yRot += speed; // changing speed makes the wiggles faster
         }
@@ -33,7 +33,7 @@ public class wiggle : MonoBehaviour
             yRot -= speed;
         }
 
-        if(yRot > 0.05 || yRot < -0.05) //changing numbers here makes the legs wiggle wider or narrower
+        if(yRot > 1 || yRot < -1) //changing numbers here makes the legs wiggle wider or narrower
         {
             leftRight = !leftRight;
         }

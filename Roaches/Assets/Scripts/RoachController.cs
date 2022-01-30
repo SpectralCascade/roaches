@@ -38,6 +38,12 @@ public class RoachController : MonoBehaviour
     [SerializeField]
     private Rigidbody body;
 
+    [SerializeField]
+    private GameObject roachModel;
+
+    [SerializeField]
+    private GameObject splatDecalPrefab;
+
     // Tracks movement from input
     private Vector2 movement;
 
@@ -45,6 +51,8 @@ public class RoachController : MonoBehaviour
     private bool colliderInFront = false;
     private bool colliderBelowFore = false;
     private bool colliderBelowAft = false;
+
+    public float killSpeed = 3.0f;
 
     public void OnMove(InputValue value) {
         movement = value.Get<Vector2>();
@@ -63,11 +71,11 @@ public class RoachController : MonoBehaviour
 
         if (upsideDown && body.useGravity) {
             // Try flipping
-            Log.Info("UPSIDE DOWN! Flipping over :)");
+            // Log.Info("UPSIDE DOWN! Flipping over :)");
             body.AddForceAtPosition(transform.up * -tiltForce * 9f * scale, front.position, ForceMode.Impulse);
         } else if (!body.useGravity) {
             // Jump!
-            Log.Info("JUMP!");
+            //Log.Info("JUMP!");
             body.AddForce(transform.up * jumpForce * scale, ForceMode.Impulse);
         }
     }
@@ -80,6 +88,20 @@ public class RoachController : MonoBehaviour
         tiltForce *= body.mass;
     }
 
+    public void OnRoachHit(Vector3 velocity) {
+        if (velocity.magnitude > killSpeed) {
+            //enabled = false;
+            //roachModel.SetActive(false);
+            if (Physics.Raycast(body.position, velocity.normalized, out RaycastHit hit)) {
+                GameObject splat = Instantiate(splatDecalPrefab);
+                splat.transform.position = hit.point + hit.normal * 0.001f;
+                splat.transform.rotation = Quaternion.LookRotation(hit.normal);
+                Log.Info("ROACH KILLED");
+                AudioController.Play("SFX_Squish");
+            }
+        }
+    }
+
     private void Update()
     {
         colliderInFront = Physics.Raycast(front.position, transform.forward, out RaycastHit frontHit, frontRayLength);
@@ -87,7 +109,7 @@ public class RoachController : MonoBehaviour
         colliderBelowAft = Physics.Raycast(back.position, transform.up * -1f, out RaycastHit belowAftHit, belowRayLength);
         //bool rayBelow = Physics.Raycast(transform.position, transform.up * -1f, out RaycastHit belowAftHit, belowRayLength);
 
-        Log.Info("Collider in front: {0}, collider down fore: {1}, collider down aft: {2}", colliderInFront, colliderBelowFore, colliderBelowAft);
+        //Log.Info("Collider in front: {0}, collider down fore: {1}, collider down aft: {2}", colliderInFront, colliderBelowFore, colliderBelowAft);
 
         // Default to no gravity
         body.useGravity = false;

@@ -59,7 +59,7 @@ public class RoachScript : MonoBehaviour
         float delta = Time.deltaTime * angularSpeed;
 
         if (didHitForward) {
-            Debug.Log("Hit forward. Trying to rotate from " + transform.up + " to " + hitForward.normal);
+            //Debug.Log("Hit forward. Trying to rotate from " + transform.up + " to " + hitForward.normal);
             transform.rotation = transform.rotation * Quaternion.LookRotation(Vector3.RotateTowards(transform.up, hitForward.normal, delta, 1).normalized);// Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(Vector3.up), delta);
         }
         if (didHitDownBack) {
