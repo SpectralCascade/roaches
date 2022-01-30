@@ -64,7 +64,7 @@ public class RoachController : MonoBehaviour
         if (upsideDown && body.useGravity) {
             // Try flipping
             Log.Info("UPSIDE DOWN! Flipping over :)");
-            body.AddForceAtPosition(transform.up * -tiltForce * 7f * scale, front.position, ForceMode.Impulse);
+            body.AddForceAtPosition(transform.up * -tiltForce * 9f * scale, front.position, ForceMode.Impulse);
         } else if (!body.useGravity) {
             // Jump!
             Log.Info("JUMP!");
@@ -74,8 +74,8 @@ public class RoachController : MonoBehaviour
 
     private void Start() {
         scale = transform.localScale.z;
-        frontRayLength *= scale;
-        belowRayLength *= scale;
+        //frontRayLength *= scale;
+        //belowRayLength *= scale;
         stickiness *= body.mass;
         tiltForce *= body.mass;
     }
