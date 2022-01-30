@@ -44,6 +44,9 @@ public class RoachController : MonoBehaviour
     [SerializeField]
     private GameObject splatDecalPrefab;
 
+    public Rigidbody handLeft;
+    public Rigidbody handRight;
+
     // Tracks movement from input
     private Vector2 movement;
 
@@ -86,6 +89,12 @@ public class RoachController : MonoBehaviour
         //belowRayLength *= scale;
         stickiness *= body.mass;
         tiltForce *= body.mass;
+    }
+
+    public void OnCollisionEnter(Collision collision) {
+        if (!string.IsNullOrEmpty(collision.gameObject.tag) && collision.gameObject.tag == "Player") {
+            
+        };
     }
 
     public void OnRoachHit(Vector3 velocity) {
