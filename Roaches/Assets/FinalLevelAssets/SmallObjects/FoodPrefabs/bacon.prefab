@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 792830704683167964}
   - component: {fileID: 792830704683167967}
   - component: {fileID: 792830704683167966}
+  - component: {fileID: 597466114}
   m_Layer: 0
   m_Name: bacon
   m_TagString: FoodItem
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 558968083396726154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9768ce09a2fb70e41bd8e579f63ed35b, type: 3}
+  m_Script: {fileID: 11500000, guid: baa8358df5d437147ad81b3fed857a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToEat: 0
@@ -156,3 +157,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.1, z: 0.53}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &597466114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558968083396726154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa8358df5d437147ad81b3fed857a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToEat: 0
+  scoreValue: 0

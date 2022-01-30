@@ -39,6 +39,9 @@ public class RoachController : MonoBehaviour
     private Rigidbody body;
 
     [SerializeField]
+    private CochRoachProto scoreNotifier;
+
+    [SerializeField]
     private GameObject roachModel;
 
     [SerializeField]
@@ -107,6 +110,7 @@ public class RoachController : MonoBehaviour
                 splat.transform.rotation = Quaternion.LookRotation(hit.normal);
                 Log.Info("ROACH KILLED");
                 AudioController.Play("SFX_Squish");
+                scoreNotifier.Death();
             }
         }
     }

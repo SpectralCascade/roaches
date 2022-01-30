@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - ThrownItem
+  - FoodItem
+  - FoodSpawnPoint
+  - Player Item
+  - CSpawnPoint
   layers:
   - Default
   - TransparentFX
