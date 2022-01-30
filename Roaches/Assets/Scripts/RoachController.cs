@@ -93,7 +93,7 @@ public class RoachController : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision) {
         if (!string.IsNullOrEmpty(collision.gameObject.tag) && collision.gameObject.tag == "Player") {
-            
+            //if (collision.gameObject.layer == Transform)
         };
     }
 

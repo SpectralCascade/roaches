@@ -10,7 +10,7 @@ public class MenuScipt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnPause();
     }
 
     void OnPause()
@@ -29,9 +29,4 @@ public class MenuScipt : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
